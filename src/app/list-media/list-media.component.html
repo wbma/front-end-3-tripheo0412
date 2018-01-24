@@ -1,0 +1,18 @@
+<p>
+  {{ printThis }}
+</p>
+
+<div class="card-deck">
+  <div class="card" *ngFor="let media of mediaArray">
+    <img class="card-img-top" [src]="mediaService.mediaUrl + media.thumbnail" [alt]="media.title">
+    <div class="card-body">
+      <h5 class="card-title">{{ media.title }}</h5>
+      <p class="card-text">{{ media.description }}</p>
+    </div>
+  </div>
+</div>
+<div *ngFor="let stop of route" >
+  <li *ngFor="let mm of stop.patterns">
+    {{mm.name}}
+  </li>
+</div>
